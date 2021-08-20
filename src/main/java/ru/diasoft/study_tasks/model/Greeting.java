@@ -1,8 +1,23 @@
 package ru.diasoft.study_tasks.model;
 
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "greetings")
+@Data
+@NoArgsConstructor
 public class Greeting {
 
-    private  long id;
+    @Id
+    private  Long id;
+    @Column
     private  String content;
 
     public Greeting(long id, String content) {
